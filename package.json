@@ -1,0 +1,28 @@
+{
+  "name": "xrsketch",
+  "version": "0.0.0",
+  "description": "Creative coding sketchbook for WebXR built on top of Three.js",
+  "main": "dist/xrsketch.cjs.js",
+  "module": "dist/xrsketch.esm.js",
+  "browser": "dist/xrsketch.umd.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js",
+    "pretest": "npm run build"
+  },
+  "author": "Adam Marc Williams",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "rollup": "^0.66.6",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0"
+  },
+  "dependencies": {
+    "g": "^2.0.1",
+    "serve": "^10.0.2",
+    "three": "^0.97.0"
+  }
+}
