@@ -48063,7 +48063,7 @@
 	  }
 
 	  if (instance !== null) {
-	    console.error('An instance of XRSketch was already present and will be overwritten. Check your not calling createSketch twice or also including a setup function on the window');
+	    console.error('An instance of XRSketch was already present. Multiple intsances may not work');
 	  }
 
 	  var sketch = new Sketch(s);
@@ -48073,6 +48073,11 @@
 
 	var handleDOMLoad = function handleDOMLoad() {
 	  if (typeof window.setup === 'function') {
+	    if (instance) {
+	      console.error('An instance of XRSketch was already present. Global sketch will be ignored');
+	      return;
+	    }
+
 	    globalMode = true;
 	    createSketch();
 	  }
