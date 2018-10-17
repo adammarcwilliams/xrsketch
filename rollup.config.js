@@ -9,7 +9,7 @@ export default [
     entry: 'src/index.js',
     dest: pkg.browser,
     format: 'umd',
-    moduleName: 'xrsketch',
+    moduleName: 'XRSketch',
     plugins: [
       resolve(), // so Rollup can find dependecies
       commonjs(), // so Rollup can convert dependecies to an ES module
